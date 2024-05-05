@@ -991,7 +991,19 @@ try {
 
     private void retourAccordeonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_retourAccordeonActionPerformed
         // TODO add your handling code here:
-         jTabbedPane1.setSelectedIndex(3);
+          
+         try{
+             
+             Retour retour=new Retour();
+             
+            retour.openRetourFenetre();
+            this.setDefaultCloseOperation(JFrame.HIDE_ON_CLOSE);
+            this.dispose();
+         }
+         catch(Exception e){
+             System.out.println("Erreur: "+e.getMessage());
+         }
+        
        
     }//GEN-LAST:event_retourAccordeonActionPerformed
 
